@@ -9,9 +9,14 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "tinacms": "^0.36.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.12.10",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
