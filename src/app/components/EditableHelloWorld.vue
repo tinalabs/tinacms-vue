@@ -1,5 +1,9 @@
 <template>
-  <HelloWorld v-bind:msg="modifiedValues.msg"></HelloWorld>
+  <HelloWorld 
+    v-bind:title="modifiedValues.title"
+    v-bind:subtitle="modifiedValues.subtitle"
+    v-bind:body="modifiedValues.body"
+  />
 </template>
 
 <script>
@@ -10,7 +14,9 @@
     name: 'EditableHelloWorld',
     inject: ['tinacms'],
     props: {
-      msg: String
+      title: String,
+      subtitle: String,
+      body: String
     },
     components: {
       HelloWorld
@@ -25,7 +31,9 @@
         id: "hello-world",
         label: "Hello World",
         fields: [
-          { name: "msg", label: "Message", component: "text" }
+          { name: "title", label: "Title", component: "text" },
+          { name: "subtitle", label: "Subtitle", component: "textarea" },
+          { name: "body", label: "Body", component: "html" }
         ],
         initialValues: this.$props
       })
