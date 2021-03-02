@@ -30,9 +30,10 @@ app.mount('#app')
  * Configure CMS Application
  */
 
-const shouldUseCMS = true;
-
 if (app && shouldUseCMS) {
   ReactDOM.render(React.createElement(Cms, { cms, app }), document.querySelector('#tinacms'))
+}
+else {
+  const shouldUseCMS = true;
 }
 
